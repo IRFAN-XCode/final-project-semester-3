@@ -1,0 +1,461 @@
+body {
+    margin-left: 210px;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7faffff;
+    transition: margin-left .3s ease;
+}
+body.sidebar-hidden {
+    margin-left: 10px;
+}
+header {
+    background: #f7faffff;
+    padding: 12px 20px;
+    height: 56px;
+    border-bottom: 1px solid #0018FF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+header img {
+    width: 170px;
+    height: auto;
+}
+img {
+    width : 170px;
+    height : 70px;
+    display: block;
+    margin: 0 auto;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 150px;
+    z-index: 1000;
+    transition: transform .3s ease;
+}
+.top-header {
+    background: #f7faffff;
+    padding: 12px 20px;
+    height: 56px;
+    border-bottom: 1px solid #0018FF;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 900;
+    display: none;
+}
+
+#sidebar-overlay.show {
+    display: block;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0018FF;
+    z-index: 1100;
+}
+.hamburger:hover {
+    color: #f7faffff;
+}
+
+/* == DASHBOARD == */
+#dashboard-container {
+    background: #f7faffff;
+    border-radius: 14px;
+    margin: 10px;
+    padding: 10px;
+}
+h2 {
+    color: #0019FF;
+}
+.card-container {
+    display: flex;
+    background: #f7faffff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.card-box-section {
+    width: 320px;
+    color: #f7faffff;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;   
+}
+#total {
+    background: #2756ffff;
+}
+#masuk {
+    background: #03e403ff;
+}
+#keluar {
+    background: #ff0f0fff;
+}
+#grafik-container {
+    display: flex;
+    gap: 26px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+#grafik-dashboard {
+    background: #f7faffff;
+    width: 475px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin: 10px;
+    margin-top: 20px;
+}
+#bar-grafik-dashboard {
+    background: #f7faffff;
+    border-radius: 10px;
+    width: 475px;
+    height: 450px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin: 10px;
+    margin-top: 20px;
+}
+#tagihan-dashboard {
+    background: #f7faffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+#tagihan-dashboard h3 {
+    margin: 0 0 12px 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2756ffff;
+}
+#tagihan-dashboard .link {
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    padding: 6px 14px;
+    background: #2756ffff;
+    color: white;
+    border-radius: 999px;
+    font-size: 13px;
+    text-decoration: none;
+}
+#tagihan-dashboard .link:hover {
+    background: #0019FF;
+}
+#tagihan-dashboard p {
+    background: #f7faffff;
+    border-bottom: 1px solid #0019FF;
+    border-top: 1px solid #0019FF;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 5px;
+    margin: 10px;
+    font-size: 14px;
+    color: #2756ffff;
+    line-height: 1.6;
+}
+#tagihan-dashboard a {
+    margin-bottom: 5px;
+}
+#tagihan-dashboard p b {
+    font-size: 15px;
+}
+#tagihan-dashboard a[href*="edit"],
+#tagihan-dashboard a[href*="hapus"] {
+    font-size: 13px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+#tagihan-dashboard a[href*="edit"] {
+    color: #3b82f6;
+}
+#tagihan-dashboard a[href*="hapus"] {
+    color: #ef4444;
+}
+#tagihan-dashboard a[href*="edit"]:hover {
+    text-decoration: underline;
+}
+#tagihan-dashboard a[href*="hapus"]:hover {
+    text-decoration: underline;
+}
+.section-title {
+    color: #2756ffff;
+}
+
+/* == NOTIFICATIONS == */
+#content-notifications {
+    /* background: #f7faffff; */
+    border-radius: 14px;
+    border-bottom: 1px solid #0019FF;
+    border-top: 1px solid #0019FF;
+    padding: 3px;
+    margin: 10px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+button {
+    padding: 10px;
+    background: #0019FF;
+    border-radius:10px;
+    border: none;
+    margin-bottom: 15px;
+    color: #f7faffff;
+}
+ul li {
+    list-style: none;
+}
+
+/* == LIST TRANSAKSI == */
+#transactions-list-content {
+    background: #f7faffff;
+    color: #0019FF;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+}
+.table thead {
+    background-color: #0019FF; 
+    color: #f1f5f9;
+}
+.table thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+.table tbody td {
+    padding: 12px 15px;
+    color: #0019FF;
+}
+.table tbody td:nth-child(3),
+.table tbody td:nth-child(4) {
+    text-align: left;
+    font-weight: 500;
+}
+.table tbody tr td[colspan] {
+    text-align: center;
+    padding: 20px;
+    color: #fa0e0eff;
+    font-style: italic;
+}
+button {
+    background: #0019FF;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+button a {
+    text-decoration: none;
+    color: #f1f5f9;
+}
+button:hover {
+    background: #000e88ff;
+}
+
+/* 
+== ADD TRANSAKSI ==
+== ADD TAGIHAN ==
+== EDIT TAGIHAN == 
+*/
+body {
+    margin-left: 210px;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7faffff;
+}
+#add-container {
+    background: #f7faffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    margin-top: 15px;
+    padding: 20px;
+}
+#title-crud {
+    color: #0019FF;
+}
+input {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #0019FF;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+select {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #0019FF;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #0019FF;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+#nominal {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #0019FF;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+#mata_uang {
+    width: 16.5%;
+    padding: 10px;
+    border: 1px solid #0019FF;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+input:focus {
+    border-color: #0019FF;
+    outline: none;
+}
+.btn {
+    width: 97%;
+    background: #0019FF;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn:hover {
+    background: #000e88ff;
+}
+#btn-back {
+    background: #0019FF;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+#btn-back a {
+    text-decoration: none;
+    color: #f7faffff;
+}
+#btn-back:hover {
+    background: #000e88ff;
+}
+
+
+/* == MOBILE & DESKTOP DETECT RESPONSIVE == */
+@media (min-width: 769px) {
+    body {
+        margin-left: 210px;
+    }
+
+    body.sidebar-hidden {
+        margin-left: 10px;
+    }
+
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .sidebar.hidden {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 10px !important;
+    }
+    .card-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card-box-section {
+        width: 380px !important;
+    }
+    #grafik-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #grafik-dashboard {
+        width: 375px !important;
+        height: 250px;
+    }
+    #bar-grafik-dashboard {
+        width: 375px !important;
+        height: auto;
+    }
+    .card-box-section {
+        width: 100%;
+    }
+    .sidebar {
+        transform: translateX(-100%);
+        width: 150px;
+        box-shadow: 4px 0 15px rgba(0,0,0,.4);
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    .top-header {
+        position: sticky;
+        top: 0;
+        z-index: 900;
+    }
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    input,
+    select,
+    textarea,
+    #nominal,
+    #mata_uang {
+        width: 100% !important;
+    }
+}
