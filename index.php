@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan Nama Lengkap" required><br><br>
+                <input type="text" id="username" name="username" placeholder="Masukkan Nama Lengkap" autocomplete="off" required><br><br>
             </div>
             
             <div class="form-group">
