@@ -27,7 +27,7 @@ $users = $admin_service->getAllUsers();
         
         <header class="header">
             <div class="user-info">
-                <img src="<?= BASE_URL ?>assets/finance-care2.jpg" alt="Logo Financial Care">
+                <img src="<?= BASE_URL ?>/assets/finance-care2.jpg" alt="Logo Financial Care">
                 <h2>Dashboard Admin</h2>
                 <a href="kirim_notif.php">Kirim Notifikasi</a>
                 <a href="../../logout.php" style="color: #ef4444">Logout</a>

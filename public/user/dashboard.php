@@ -47,7 +47,7 @@ $kategori_data = array_column($analysis['boros_categories'], 'total');
 <body>
     <header class="top-header">
         <button id="toggleSidebar" class="hamburger">☰</button>
-        <img src="<?= BASE_URL ?>assets/finance-care2.jpg" alt="Logo Financial Care">
+        <img src="<?= BASE_URL ?>/assets/finance-care2.jpg" alt="Logo Financial Care">
     </header>
 
     <h2 style="font-size: 40px;">Dashboard</h2>

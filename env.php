@@ -1,6 +1,12 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 
+if ($_SERVER['HTTP_HOST'] === 'localhost') {
+    define('BASE_URL', 'http://localhost/app-fp');
+} else {
+    define('BASE_URL', 'https://financialcare.my.id');
+}
+
 function loadEnv($path = __DIR__ . "/.env") {
     if (!file_exists($path)) return;
 

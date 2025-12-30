@@ -1,2 +1,4 @@
 <?php
-define('BASE_URL', '/app-fp/');
+require_once __DIR__ . '/env.php';
+
+

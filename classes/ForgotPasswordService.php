@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '../../config.php';
 require_once __DIR__ . '/ForgotPasswordMailer.php';
 
 class ForgotPasswordService {
@@ -23,7 +24,7 @@ class ForgotPasswordService {
         mysqli_query($this->db, "INSERT INTO password_resets (user_id, token, expired_at)
         VALUES ($user_id, '$token', DATE_ADD(NOW(), INTERVAL 1 HOUR))");
 
-        $link = "http://localhost/app-fp/public/user/reset_password.php?token=$token";
+        $link = BASE_URL . '/public/user/reset_password.php?token=' . $token;
 
         $this->mailer->sendResetLink($email, $link);
     }

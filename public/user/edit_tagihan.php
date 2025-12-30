@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <header class="top-header">
         <button id="toggleSidebar" class="hamburger">☰</button>
-            <img src="<?= BASE_URL ?>assets/finance-care2.jpg" alt="Logo Financial Care">
+            <img src="<?= BASE_URL ?>/assets/finance-care2.jpg" alt="Logo Financial Care">
     </header>
 
     <button id="btn-back"><a href="dashboard.php">Kembali</a></button>

@@ -24,7 +24,7 @@ $transaksi_list = $transaksi_obj->readAll($id_user);
 <body>
     <header class="top-header">
         <button id="toggleSidebar" class="hamburger">☰</button>
-        <img src="<?= BASE_URL ?>assets/finance-care2.jpg" alt="Logo Financial Care">
+        <img src="<?= BASE_URL ?>/assets/finance-care2.jpg" alt="Logo Financial Care">
     </header>
 
     <h2 style="font-size: 40px;">Daftar Transaksi</h2>

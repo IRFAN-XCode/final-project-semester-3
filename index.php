@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+require_once 'env.php';
 require_once 'config.php';
 require_once 'db.php';
 require_once 'classes/auth.php';
@@ -10,10 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // 1. Cek pertama: Apakah username & password benar?
     if ($auth->login($username, $password)) {
         
-        // 2. Jika BENAR, baru cek role-nya
         if ($_SESSION['role'] === 'admin') {
             echo "<script>
                 alert('Login Admin BERHASIL!');
@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
     } else {
-        // 3. Jika login() mengembalikan FALSE (salah password/username)
         $error = "Username atau password salah.";
     }
 }
@@ -44,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="login-container">
         <div id="logos">
-            <img src="<?= BASE_URL ?>assets/logo-login.jpg" alt="Logo Finance Care">
+            <img src="<?= BASE_URL ?>/assets/logo-login.jpg" alt="Logo Finance Care">
         </div>
 
         <form method="POST">

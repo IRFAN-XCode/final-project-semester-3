@@ -69,13 +69,12 @@
 
 <aside class="sidebar" id="sidebar">
     <div class="brand">
-        <img src="<?= BASE_URL ?>assets/Finance-care.jpg" alt="Logo Financial Care">
+        <img src="<?= BASE_URL ?>/assets/Finance-care.jpg" alt="Logo Financial Care">
     </div>
     
     <nav class="menu">
         <a href="dashboard.php">Dashboard</a>
         <a href="list_transaksi.php">Transaksi
-        <!-- <a href="kurs.php">Kurs Mata Uang</a> -->
         <a href="notifikasi.php" style="position:relative;">Notifikasi
     <span id="notif-badge"
         style="

@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="container">
         <header class="header">
             <div class="user-info">
-                <img src="<?= BASE_URL ?>assets/finance-care2.jpg" alt="Logo Financial Care">
+                <img src="<?= BASE_URL ?>/assets/finance-care2.jpg" alt="Logo Financial Care">
                 <h2>Panel Notifikasi</h2>
                 <a href="dashboard_admin.php" class="logout-link">Kembali</a>
                 <a href="../../logout.php" style="color: #ef4444">Logout</a>
