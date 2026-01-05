@@ -69,7 +69,7 @@
 
 <aside class="sidebar" id="sidebar">
     <div class="brand">
-        <img src="<?= BASE_URL ?>/assets/Finance-care.jpg" alt="Logo Financial Care">
+        <img src="<?= BASE_URL ?>/assets/finance-care.jpg" alt="Logo Financial Care">
     </div>
     
     <nav class="menu">
