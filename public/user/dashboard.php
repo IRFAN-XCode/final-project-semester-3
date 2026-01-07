@@ -14,8 +14,8 @@ $id_user = $_SESSION['user_id'];
 $analytic_service = new AnalyticService($conn);
 $routine_cash = new RoutineCash($conn);
 
-// 1. Dapatkan Ringkasan (Cards)
-$summary = $analytic_service->getMonthlySummary($id_user); // Ketentuan #9 
+// 1. Dapatkan Ringkasan
+$summary = $analytic_service->getMonthlySummary($id_user); 
 
 // 2. Dapatkan Analisis dan Rekomendasi
 $analysis = $analytic_service->analyzeSpendingCategories($id_user);
@@ -24,14 +24,14 @@ $analysis = $analytic_service->analyzeSpendingCategories($id_user);
 $rutin_list = $routine_cash->readAll($id_user);
 
 // 4. Dapatkan Data untuk Grafik
-$chart_data = $analytic_service->getMonthlyDataForChart($id_user, 6); // 6 bulan terakhir
+$chart_data = $analytic_service->getMonthlyDataForChart($id_user, 6); 
 
-// Data untuk Chart.js (Grafik: pemasukan & pengeluaran bulanan - Time-series) [cite: 58, 28]
+// Grafik: pemasukan & pengeluaran bulanan - Time-series
 $labels = array_column($chart_data, 'bulan');
 $pemasukan_data = array_column($chart_data, 'pemasukan');
 $pengeluaran_data = array_column($chart_data, 'pengeluaran');
 
-// Data untuk Grafik Kategori Boros (Kategori - Bar/Pie) [cite: 28]
+// Grafik Kategori Boros - Bar
 $kategori_labels = array_column($analysis['boros_categories'], 'kategori');
 $kategori_data = array_column($analysis['boros_categories'], 'total');
 ?>

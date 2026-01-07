@@ -10,9 +10,9 @@ class AnalyticService {
         $bulan_ini = date('Y-m-01');
         $bulan_depan = date('Y-m-01', strtotime('+1 month'));
 
-        $sql = "SELECT kategori, SUM(nominal_idr) AS total FROM transaksi WHERE user_id = ? AND tanggal >= ? AND tanggal < ? GROUP BY kategori";
+        $sql = "SELECT kategori, SUM(nominal_idr) AS total FROM transaksi WHERE user_id = ? GROUP BY kategori";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("iss", $id_user, $bulan_ini, $bulan_depan);
+        $stmt->bind_param("i", $id_user);
         $stmt->execute();
         $result = $stmt->get_result();
         
